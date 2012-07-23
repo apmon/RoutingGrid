@@ -237,11 +237,13 @@ public class RoutingGrid {
 						TimeDistance result = getDistance(a, b);
 						total.addTimeDistance(result);
 						rowTotal.addTimeDistance(result);
-						if ((result.distance - references[counter].distance - 50000 > 0) ||
+						if ((result.distance == 0) || (result.time > 3600000)) {
+							bw.write("<td bgcolor=\"red\"> ");
+						} else 	if ((result.distance - references[counter].distance - 50000 > 0) ||
 								(result.distance - references[counter].distance > 0.05*references[counter].distance) ||
 								(result.time - references[counter].time - 1800 > 0) ||
 										(result.time - references[counter].time > 0.05*references[counter].time)) {
-							bw.write("<td bgcolor=\"red\"> ");
+							bw.write("<td bgcolor=\"orange\"> ");
 						} else {
 							bw.write("<td bgcolor=\"lime\"> ");
 						}
