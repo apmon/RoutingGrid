@@ -4,7 +4,7 @@ RoutingGrid
 Creates a distance routing grid between cities to check for broken routes in OSM
 
 This is a little java program to create a grid of distances between cities / locations as seen by OSM data.
-It uses the router provided by map.projct-osrm.org.
+It uses the router provided by [map.project-osrm.org](http://map.project-osrm.org).
 
 It also uses a refernece source to determin which routes are longer than expected. For the moment it uses
 the google directions API as a reference.
